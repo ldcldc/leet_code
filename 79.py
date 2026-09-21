@@ -1,5 +1,3 @@
-b = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
-w = "SEE"
 
 def exist(board, word):
     m = len(board[0])   #j
@@ -66,6 +64,7 @@ def exist_2(board, word):
                     return True
     return False
             
-    
+b = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
+w = "SEE"
 print(exist_2(b, w))
 
