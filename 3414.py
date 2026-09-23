@@ -17,16 +17,16 @@ class Solution:
                 dp[i][k] = dp[i-1][k] 
                 
             for k in range(4):
-                cand_w = dp[p_i][k][0] + w
+                new_w = dp[p_i][k][0] + w
                 
-                if dp[i][k+1][0] < cand_w:
-                    cand_list = sorted([*dp[p_i][k][1], o_i])
-                    dp[i][k+1] = (cand_w, cand_list)
+                if dp[i][k+1][0] < new_w:
+                    new_list = sorted([*dp[p_i][k][1], o_i])
+                    dp[i][k+1] = (new_w, new_list)
                     
-                elif dp[i][k+1][0] == cand_w:
-                    cand_list = sorted([*dp[p_i][k][1], o_i])
-                    if dp[i][k+1][1] > cand_list:
-                        dp[i][k+1] = (cand_w, cand_list)
+                elif dp[i][k+1][0] == new_w:
+                    new_list = sorted([*dp[p_i][k][1], o_i])
+                    if dp[i][k+1][1] > new_list:
+                        dp[i][k+1] = (new_w, new_list)
 
         return dp[n][4][1]
 a = Solution()
