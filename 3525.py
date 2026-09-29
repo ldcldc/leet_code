@@ -55,7 +55,8 @@ class Solution:
             
             mid = (st + e) // 2
             
-            return add(interval_mod(st, mid, index * 2, left, right), interval_mod(mid + 1, e, index * 2 + 1, left, right))
+            return add(interval_mod(st, mid, index * 2, left, right), 
+                       interval_mod(mid + 1, e, index * 2 + 1, left, right))
         
         init(0, n - 1, 1)
         
